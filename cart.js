@@ -33,8 +33,6 @@ const cart = [
 const summedPrice = cart.reduce(function(acc,elem)){
     return acc + elem
 }
-   
-
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -81,8 +79,8 @@ let calcFinalPrice = (cartTotal, couponValue, tax) => {
     I'm assuming this is for a restaurant's web page or mobile app for ordering food to-go.
     Customer info needed: 
         Name (however they want to be identified, ex, 'Prince', 'Beyonce', 'Tim the Enchanter') (STRING)
-        Phone number (in case there are questions). (NUMBER)
-        Time they'd like to pick up the order (so it can be ready when they arrive) (NUMBER)
+        Phone number (in case there are questions). (string, because of area code parentheses)
+        Time they'd like to pick up the order (so it can be ready when they arrive) (NUMBER, 24-hour time)
         Description of food in the cart (so they can verify the food is correct) (STRING)
         Quantity of each item, (so they can get the right about of food) (NUMBER) 
         Price--without tax-- for that food item (so they can see price break-down per item) (NUMBER)
@@ -97,14 +95,13 @@ let calcFinalPrice = (cartTotal, couponValue, tax) => {
 
 //CODE HERE
 let cartPage = {
-    name:
-    phone:
-    pickUpTime:
-    foodInCart:
-    qtyFoodItem:
-    priceFoodItem:
-    subTotal:
-    Total:
-    allergiesInstructions:
-    
+    name: 'Mary Tyler Moore',
+    phone: '(952) 209-1990',
+    pickUpTime: 1800,
+    foodInCart: "cheese pizza",
+    qtyFoodItem: 2,
+    priceFoodItem: 18.00,
+    subTotal: 36.00,
+    Total: 38.75,
+    allergiesInstructions: 'might be late picking up'
 }

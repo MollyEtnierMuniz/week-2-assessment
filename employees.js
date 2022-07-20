@@ -68,7 +68,7 @@ class Manager extends Employee {
         console.log (`${this.name} manages ${this.employees}.`)
     }
     addEmployee(emp){
-        this.emp = employees.push
+        this.emp = employees.push(emp)
     }
 }
 /*

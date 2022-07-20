@@ -22,7 +22,7 @@
 //CODE HERE
 let greetUser = (username) => `Welcome back, ${username}`
 
- //console.log (greetUser('Molly'))
+//  console.log (greetUser('Molly'))
 
 
 //////////////////PROBLEM 2////////////////////
@@ -46,25 +46,20 @@ let greetUser = (username) => `Welcome back, ${username}`
 */
 
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
-let deliveryAvailable = false
+
 function canWeDeliver (zipCode){
-    for (let i=0; i<deliveryAreaZipCodes.length; i++){
-        if (zipCode === deliveryAreaZipCodes[i]){
-            return deliveryAvailable = true   
-        }
-    }    
-}
-canWeDeliver(85206)
-    if (deliveryAvailable = true){
-    console.log (`You're in our delivery zone!`)
-    } else {
-        console.log (`Sorry, we can't deliver to that address`)
+    if (deliveryAreaZipCodes.includes (zipCode)){
+        return `You're in our delivery zone!`
+    } else { 
+        return `Sorry, we can't deliver to that address.`
     }
+}
+    // console.log (canWeDeliver(55391))
+    // console.log (canWeDeliver(85204))
+       
 /* 
     Problem 2 Continued
-
     Now you're going to rewrite your function.
-
     If you wrote `canWeDeliver` using a loop of
     some kind, write a new function (`canWeDeliverTwo`)
     below, using the `includes` array method. 
@@ -77,21 +72,19 @@ canWeDeliver(85206)
     Name your new function `canWeDeliverTwo`.
 */
 // CODE HERE
-let canDeliver = false
-let canWeDeliverTwo = (zipCode) => {
-    while (canDeliver =false){
-    if (deliveryAreaZipCodes.includes (zipCode)){
-        return canDeliver = false
-    }else { canDeliver = true
+let zipCode =55205
+
+function canWeDeliverTwo() {
+    for (let i=0; i<deliveryAreaZipCodes.length; i++)
+    if (deliveryAreaZipCodes[i] === zipCode){
+        return `You're in our delivery zone!`
+    } else { 
+        return `Sorry, we can't deliver to that address.`
     }
 }
-if (canDeliver = true){
-    console.log ('We can deliver to you.')
-     } else {
-        console.log ('Sorry, that address is out of our delivery area.')
-    }
-}
-canWeDeliverTwo (7)
+// console.log(canWeDeliverTwo())
+
+
 //////////////////PROBLEM 3////////////////////
 /* 
     Below is an array of objects that have some
@@ -136,6 +129,6 @@ let title = title.replace('15', '10')
     whitespace in this string, since it seems
     to be displaying wrong on the live site.
 */
+//CODE HERE
 let desc = desc.trim()
 desc.replace ('March', 'April')
-//CODE HERE
